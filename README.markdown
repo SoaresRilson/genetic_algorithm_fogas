@@ -2,7 +2,7 @@
 
 ## Descrição do Problema
 
-O desafio consiste em resolver um **Vehicle Routing Problem (VRP)** para a empresa Fogás, que distribui botijões de gás. O objetivo é otimizar as rotas de entrega para 35 clientes a partir de um depósito central, utilizando 5 veículos, cada um com capacidade de 100 botijões. Cada cliente possui uma demanda específica (total de 350 botijões), e as rotas devem minimizar a distância total percorrida, respeitando a capacidade dos veículos. O problema considera:
+O desafio consiste em resolver um **Vehicle Routing Problem (VRP)** para a empresa Fogás, que distribui botijões de gás. O objetivo é otimizar as rotas de entrega para 35 clientes a partir de um depósito central, utilizando 5 veículos, cada um com capacidade de 100 botijões. Cada cliente possui uma demanda específica, e as rotas devem minimizar a distância total percorrida, respeitando a capacidade dos veículos. O problema considera:
 - **Depósito**: Localizado em (400, 100).
 - **Clientes**: 35 pontos com coordenadas (x, y) e demandas entre 5 e 20 botijões.
 - **Restrições**: Todos os clientes devem ser atendidos, e a soma das demandas por veículo não pode exceder 100 botijões.
@@ -21,14 +21,12 @@ A solução utiliza um **algoritmo genético** para otimizar as rotas, implement
   - **Gerações**: 2000 iterações para explorar soluções e alcançar convergência.
 
 - **Otimização com Matriz de Distâncias**:
-  - Uma matriz 31x31 (depósito + 30 clientes) armazena as distâncias euclidianas calculadas uma única vez no início.
+  - Uma matriz 36x36 (depósito + 35 clientes) armazena as distâncias euclidianas calculadas uma única vez no início.
   - Reduz o custo computacional da função de aptidão, essencial para 2000 gerações.
 
 - **Visualização**:
   - **Gráfico de Convergência**: Um gráfico quadrado (300x300 pixels) à esquerda da tela exibe a evolução da melhor aptidão (distância total) ao longo das 2000 gerações, com linha verde, fundo branco, bordas pretas e rótulos em Arial para os eixos (gerações e aptidão).
   - **Rotas**: Desenhadas à direita, com o depósito (círculo vermelho), clientes (círculos azuis) e rotas em cores distintas para cada veículo.
-  - Inspirado no estilo visual do exemplo `genetic_algorithm_camouflage`.
-
 - **Saída**: O console exibe a melhor aptidão e solução a cada geração, com a solução final detalhada ao término.
 
 ## Requisitos para Execução
@@ -64,7 +62,7 @@ Para executar o programa, você precisa de:
 
 ## Observações
 
-- **Configuração**: 30 clientes (demanda total = 350 botijões), 5 veículos (capacidade = 100 cada), 2000 gerações.
+- **Configuração**: 35 clientes, 5 veículos (capacidade = 100 cada), 2000 gerações.
 - **Eficiência**: A matriz de distâncias reduz o tempo de execução, tornando o algoritmo escalável para problemas maiores.
 - **Visualização**: O gráfico quadrado à esquerda ajuda a analisar a convergência, enquanto as rotas à direita mostram a solução visualmente.
 - **Melhorias Futuras**: Adicionar pausa entre gerações, salvar a matriz de distâncias em um arquivo ou incluir rótulos adicionais no gráfico.
