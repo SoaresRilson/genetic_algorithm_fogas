@@ -2,9 +2,9 @@
 
 ## Descrição do Problema
 
-O desafio consiste em resolver um **Vehicle Routing Problem (VRP)** para a empresa Fogás, que distribui botijões de gás. O objetivo é otimizar as rotas de entrega para 30 clientes a partir de um depósito central, utilizando 5 veículos, cada um com capacidade de 100 botijões. Cada cliente possui uma demanda específica (total de 350 botijões), e as rotas devem minimizar a distância total percorrida, respeitando a capacidade dos veículos. O problema considera:
+O desafio consiste em resolver um **Vehicle Routing Problem (VRP)** para a empresa Fogás, que distribui botijões de gás. O objetivo é otimizar as rotas de entrega para 35 clientes a partir de um depósito central, utilizando 5 veículos, cada um com capacidade de 100 botijões. Cada cliente possui uma demanda específica (total de 350 botijões), e as rotas devem minimizar a distância total percorrida, respeitando a capacidade dos veículos. O problema considera:
 - **Depósito**: Localizado em (400, 100).
-- **Clientes**: 30 pontos com coordenadas (x, y) e demandas entre 5 e 20 botijões.
+- **Clientes**: 35 pontos com coordenadas (x, y) e demandas entre 5 e 20 botijões.
 - **Restrições**: Todos os clientes devem ser atendidos, e a soma das demandas por veículo não pode exceder 100 botijões.
 - **Objetivo**: Encontrar rotas que minimizem a distância total percorrida, com visualização interativa das rotas e da convergência do algoritmo.
 
